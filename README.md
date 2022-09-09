@@ -3,6 +3,12 @@ course work
 
 # ENG
 Project is releated to ICT products and services website "Laikom" 
+draft is in folder ideas: 
+    detail draft about pages and uses
+    >pages_description_functions.docx
+    diagram for all pages in website draft
+    >Untitled Diagram.drawio.svg
+    
 
 P.S. This project is only for study porpuses, and all rights reserved. 
 
