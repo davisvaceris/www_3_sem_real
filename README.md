@@ -1,5 +1,5 @@
 # www_3_sem_real
-course work 
+LLU | LBTU 3 sem course work 
 
 # ENG
 Project is releated to ICT products and services website "Laikom" 
