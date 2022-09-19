@@ -1,0 +1,48 @@
+//variables 
+$main_new_colors: rgb(230, 255, 202), rgb(209, 247, 167), rgb(157, 187, 138), rgb(142, 180, 117);
+
+//default
+@for $i from 1 to 5{
+    .product:nth-child(4n+#{$i}){
+        $main_product_color: nth($main_new_colors, $i);
+        background-color: $main_product_color;
+    }
+}
+.product{
+    margin-top: 15px;
+    margin-left: 5px;
+
+}
+#content_holder div div.main_new {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+@media screen and (max-width:575px){
+    
+}
+//
+// phone
+//
+@media screen and (min-width:576px) and (max-width:767px){
+    
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    
+}
+//
+//monitors
+//
+@media screen and (min-width:992px){
+    
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+    
+}
+@media screen and (min-width:1200px){
+    
+}
