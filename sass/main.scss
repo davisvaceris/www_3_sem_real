@@ -1,6 +1,6 @@
 $bg-col:#59ca59;
 $txt-colo:#000000;
-$main-bg-col:#7b788d;
+$main-bg-col:#d1cde9;
 html{
     h1,h2,h3,h4,h5,h6, p{
         color:$txt-colo;
@@ -68,23 +68,39 @@ body{
 //phone
 
 @media screen and(min-width:0px) and (max-width:575px) {
+    html{
+        h1{font-size: 16px;}
+        h2{font-size: 15px;}
+        h3{font-size: 15px;}
+        h4{font-size: 15px;}
+        h5{font-size: 14px;}
+        h6{font-size: 13px;}
+        p{font-size: 12px;}
+        li{font-size: 12px;}
+    }
     .body_content{
         margin-left: 2%;
     }
     #main_content{
         margin-right: 0%;
     }
-    #foot iframe{
-        height:80%;
-        width: 100%;
-    }
     footer{
         #foot{
             width: 98%;
-            height:500px;
-            div div{
-                padding-top: 20px;
-                padding-left: 30px;
+            height:450px;
+            ul{
+                margin-top: 0;
+            }
+            iframe{
+                height:80%;
+                width: 100%;
+            }
+            .contacts{
+                height:140px;
+            }
+            #PrivAndCook{
+                height: 30px;
+                
             }
         }
     }
@@ -98,10 +114,22 @@ body{
 #main_content{
     margin-right: 2%;
 }
-#foot iframe{
-    height:80%;
-    width: 100%;
-}
+#foot {
+    min-height: 350px;
+        iframe{
+        height:80%;
+        width: 100%;
+        }
+        ul{
+        margin-top:5px;
+        }
+        .contacts{
+            margin-bottom: 30px;
+        }
+        #PrivAndCook{
+            height: 60px;
+            
+        }}
 }
 
 //tablets
@@ -120,10 +148,18 @@ body{
     background-color: lime;
     margin-right: 3%;
 }
-#foot iframe{
-    height:80%;
-    width: 100%;
-}
+#foot {
+    min-height: 300px;
+        iframe{
+        height:80%;
+        width: 100%;    
+        }
+        ul{
+            margin-top:5px;
+        }
+        #PrivAndCook{
+            height: 30px;
+        }}  
 }
 
 //computer & tablets
@@ -138,27 +174,29 @@ body{
 }
 @media screen and (min-width:992px) and (max-width:1199px) {
     
-    #foot.container{
-        height:300px;
-    }
-    #foot iframe{
-        height:100%;
-        width: 80%;
-    }
+
     .navbar_content{
         margin-left: 4%;
         margin-right:8%;
+    } 
+    #foot.container{
+        height:300px;
+            iframe{
+                height:100%;
+                width: 80%;
+            }
     }
 }
 @media screen and (min-width:1200px){
-    #foot.container{
-        height:350px;
-    }
     .navbar_content{
         margin-left: 5%;
         margin-right:11%;
     }
-    #foot iframe{
-        height:125%;
+    
+    #foot.container{
+        height:350px;
+            iframe{
+                height:125%;
+            }
     }
 }

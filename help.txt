@@ -2,4 +2,13 @@ https://www.youtube.com/watch?v=aPBFqDIIPYE
 https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-examples.html
 https://github.com/davisvaceris/www_3_sem_real
 need to add .gitignore add ignore to .md for security
-create .md where is secure connection detaisl to s3 bucket 
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
