@@ -1,5 +1,8 @@
+//import {cript} from './const.js';
+
 const username_regex = new RegExp (/[a-zA-Z][a-zA-Z0-9-_]{5,32}/gi);
 const password_regex = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{7,32}/gi);
+//const CryptoJS = require('crypto-js');
 var username = document.getElementById("username");
 var password = document.getElementById("password");
 var loginh = document.getElementById("login");
@@ -14,9 +17,10 @@ function login(username, password) {
             alert("Please enter a password");
         }
         else{
+            //const usr = CryptoJS.AES.encrypt(username,"DAVIS");
             if(rememberMe.checked) {
-                Cookies.set("username",username,{expires:7});
-                Cookies.set("login",true,{expires:7});
+                setCookie("username",username,5)
+                setCookie("login",true,5)
             }
             else{
                 sessionStorage.setItem("username",username)
@@ -29,4 +33,11 @@ function login(username, password) {
 }
 loginh.onclick=()=>{
     login(username.value,password.value);
+    
+function setCookie(username, value, expiry) {
+    const date = new Date();
+    date.setTime(date.getTime() + (expiry * 24 * 60 * 60 * 1000));
+    var expires = "expires="+date.toUTCString();
+    document.cookie = username + "=" + value + ";" + expires + ";path=/";
+  }
 }

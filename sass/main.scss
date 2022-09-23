@@ -6,6 +6,12 @@ html{
         color:$txt-colo;
     }
 }
+.login{
+    display: block;
+}
+.logout{
+ display: none;
+}
     
 .navbar{
     margin-bottom: 30px;
