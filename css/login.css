@@ -59,3 +59,12 @@ h1{
     background-color:black;
     }
 }
+
+/* fixed height of background image  */
+
+@media  only screen and (min-height:0px) and (max-height:400px) {
+    #main{
+        height:400px;
+    }
+    
+}

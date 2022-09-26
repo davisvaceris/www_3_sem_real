@@ -3,15 +3,24 @@ window.onload =()=>{
 const nav_user = document.getElementById('nav_user');
 const nav_login = document.getElementById('nav_login');
 const nav_logout = document.getElementById('nav_logout');
+//check if user is login 
+
+console.log(sessionStorage.getItem('login')+" values is true")
+if(sessionStorage.getItem('login')=='true'){
+  LoginLogout(nav_user,nav_login);
+}
+//if user is NOT logged in
+else{
+  LoginLogout(nav_login, nav_user);
+}
+if(getCookie('login') == true) {
+  LoginLogout(nav_user,nav_login);
+}
+
 //auto hide on scroll nav bar 
 document.addEventListener("DOMContentLoaded", function(){
-
     el_autohide = document.querySelector('.autohide');
-    
-    // add padding-top to bady (if necessary)
     navbar_height = document.querySelector('.navbar').offsetHeight;
-    // document.body.style.paddingTop = navbar_height + 'px';
-  
     if(el_autohide){
       var last_scroll_top = 0;
       window.addEventListener('scroll', function() {
@@ -26,20 +35,17 @@ document.addEventListener("DOMContentLoaded", function(){
             }
             last_scroll_top = scroll_top;
       }); 
-      // window.addEventListener
     }
-    // if
-  
   }); 
   console.log(getCookie('login'));
   // DOMContentLoaded  end
-  //logout cookies clear event
-  if(getCookie('login') == true) {
-    LoginLogout(nav_user,nav_login);
-  }
+
 
 nav_logout.onclick =() => {
     LoginLogout(nav_login, nav_user);
+    deleteAllCookies(); // clear all cookies
+    sessionStorage.clear(); //clear all sessionStorage
+
   };
 
 function LoginLogout( login , logout) {
@@ -67,6 +73,16 @@ function getCookie(cookiename) {
     }
   }
   return "";
+}
+function deleteAllCookies() {
+  var cookies = document.cookie.split(";");
+
+  for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      var eqPos = cookie.indexOf("=");
+      var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT ;path=/";
+  }
 }
 
   //check if user is log in and hide navbar options 

@@ -30,14 +30,14 @@ function login(username, password) {
             setTimeout(()=>{window.location.replace('home.html');},3000);
         }
     }
-}
-loginh.onclick=()=>{
-    login(username.value,password.value);
-    
+        
 function setCookie(username, value, expiry) {
     const date = new Date();
     date.setTime(date.getTime() + (expiry * 24 * 60 * 60 * 1000));
     var expires = "expires="+date.toUTCString();
     document.cookie = username + "=" + value + ";" + expires + ";path=/";
   }
+}
+loginh.onclick=()=>{
+    login(username.value,password.value);
 }
