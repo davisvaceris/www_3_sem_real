@@ -3,19 +3,16 @@ window.onload =()=>{
 const nav_user = document.getElementById('nav_user');
 const nav_login = document.getElementById('nav_login');
 const nav_logout = document.getElementById('nav_logout');
-//check if user is login 
 
-console.log(sessionStorage.getItem('login')+" values is true")
-if(sessionStorage.getItem('login')=='true'){
+//check if user is login 
+if(getCookie('login') == 'true'||sessionStorage.getItem('login')=='true'){
   LoginLogout(nav_user,nav_login);
 }
 //if user is NOT logged in
 else{
   LoginLogout(nav_login, nav_user);
 }
-if(getCookie('login') == true) {
-  LoginLogout(nav_user,nav_login);
-}
+
 
 //auto hide on scroll nav bar 
 document.addEventListener("DOMContentLoaded", function(){
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function(){
       }); 
     }
   }); 
-  console.log(getCookie('login'));
   // DOMContentLoaded  end
 
 
@@ -55,11 +51,6 @@ function LoginLogout( login , logout) {
   logout.classList.remove('login');
 };
 
-// function getCookie(name) {
-//   const value = `; ${document.cookie}`;
-//   const parts = value.split(`; ${name}=`);
-//   if (parts.length === 2) return parts.pop().split(';').shift();
-// }
 function getCookie(cookiename) {
   let name = cookiename + "=";
   let spli = document.cookie.split(';');
@@ -84,8 +75,5 @@ function deleteAllCookies() {
       document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT ;path=/";
   }
 }
-
-  //check if user is log in and hide navbar options 
-
   
 };
