@@ -1,8 +1,11 @@
-:root{--bg_col: rgba(223, 219, 219, 0.829);}
+:root{--bg_col: rgb(212, 212, 212);}
 
 html, body{
     height: 100vh;
     margin: 0;
+}
+p, label.form-label, span{
+    font-size: 20px;
 }
 
 html, body, #body{
@@ -48,6 +51,12 @@ background-color:black;
 h1{
     text-align: center;
 }
+.accept {
+    border:2px solid #0f0;
+}
+.reject{
+    border:3px solid #f00;
+}
 
 @media only screen and (min-width:769px) {
     #body{
@@ -69,7 +78,7 @@ h1{
 
 @media  only screen and (min-height:0px) and (max-height:400px) {
     #main{
-        height:400px;
+        height: 600px;
     }
     
     #body{
