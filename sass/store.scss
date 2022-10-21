@@ -1,5 +1,5 @@
 //variables 
-$main_new_colors: #f8f8f8, #cecece, #f0f0f0, #bebebe;
+$main_new_colors: #e6ffca, #aec096, #d9ffc2, #b8f093;
 
 //default
 @for $i from 1 to 5{
@@ -18,12 +18,6 @@ $main_new_colors: #f8f8f8, #cecece, #f0f0f0, #bebebe;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-}
-#main_content{
-    background-color: #fff !important;
-}
-#side_content{
-    background-color:#ecececda !important;
 }
 
 .news_images img{
