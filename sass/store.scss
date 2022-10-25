@@ -23,8 +23,25 @@ $main_new_colors: #e6ffca, #aec096, #d9ffc2, #b8f093;
 .news_images img{
     width: 150px;
 }
-.news_paragraph_summary{
+.pagination{
+    &,
+    *{
+    user-select: none;
+    }
 
+    a{
+    display:inline-block;
+    padding:0 10px;
+    cursor:pointer;
+    &.disabled{
+        opacity:.3;
+        pointer-events: none;
+    cursor:not-allowed;
+    }
+    &.current{
+        background:#f3f3f3;
+    }
+    }
 }
 
 
