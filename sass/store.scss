@@ -1,5 +1,5 @@
 //variables 
-$main_new_colors: #e6ffca, #aec096, #d9ffc2, #b8f093;
+$main_new_colors: #d3d3d3, #c7c1c1, #d8d8d8, #bebebe;
 
 //default
 @for $i from 1 to 5{
@@ -20,6 +20,10 @@ $main_new_colors: #e6ffca, #aec096, #d9ffc2, #b8f093;
     padding-right: 0;
 }
 
+#main_content{
+    background-color: #ffffff !important;
+    margin-left: 5% !important;
+}
 .news_images img{
     width: 150px;
 }

@@ -5,7 +5,7 @@ for (var i = 1; i <122; i++) {
 	var element_2=document.createElement('h3');
 	element_2.appendChild(document.createTextNode('Product ' + i+' name'));
 	var element_3= document.createElement("a")
-	element_3.href = "products-"+i;
+	element_3.href = "products/product-"+i+".html";
 	element_3.appendChild(element_2);
 	element_3.appendChild(element_1);
 	var element_4 = document.createElement('div');
@@ -19,8 +19,8 @@ for (var i = 1; i <122; i++) {
             products[i].classList.add('me-sm-3');
             products[i].classList.add('me-0');
             products[i].classList.add('col-md-3');
-            products[i].classList.add('col-sm-5');
-            products[i].classList.add('col-10');
+            products[i].classList.add('col-sm-4');
+            products[i].classList.add('col-11');
     }
 
 	var products = document.getElementsByClassName('product');
@@ -145,4 +145,8 @@ for (var i = 1; i <122; i++) {
 	})(jQuery);
 	
 	$(".products").pagify(26, ".product");
+	var products =document.getElementsByClassName('pagination');
+	products[0].classList.add('col-12');
+	products[0].classList.add('d-flex');
+	products[0].classList.add('justify-content-center');
 	

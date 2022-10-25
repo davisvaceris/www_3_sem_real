@@ -4,34 +4,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/store.css">
-    <link rel="icon" href="../img/tests.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/product_page.css">
+    <link rel="icon" href="../../img/tests.ico" type="image/x-icon">
     <title>Home | Davis Vaceris</title>
   </head>
   <body>
+
+      <!-- NAVIGATION BAR -->
+
     <nav class="navbar sticky-lg-top navbar-expand-lg navbar-light bg-light autohide">
       <div class="container-fluid navbar_content">
-        <a class="navbar-brand ms-lg-5" href="home.html">HOME LOGO</a>
+        <a class="navbar-brand ms-lg-5" href="../home.html">HOME LOGO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav ms-auto my-2 my-lg-1 me-lg-5 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="store.html">store</a>
+              <a class="nav-link active" aria-current="page" href="../store.html">store</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link active" aria-current="page"href="services.html">services</a>
+              <a class="nav-link active" aria-current="page"href="../services.html">services</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 about us
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown1">
-                <li><a class="dropdown-item" href="#">news</a></li>
-                <li><a class="dropdown-item" href="#">contacts</a></li>
-                <li><a class="dropdown-item" href="#">chat with us</a></li>
+                <li><a class="dropdown-item" href="../#">news</a></li>
+                <li><a class="dropdown-item" href="../#">contacts</a></li>
+                <li><a class="dropdown-item" href="../#">chat with us</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown" id="nav_user">
@@ -39,32 +43,65 @@
                 user
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown2">
-                <li><a class="dropdown-item" href="#">profile</a></li>
+                <li><a class="dropdown-item" href="../">profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#" id="nav_logout">logout</a></li>
               </ul>
             </li>
             <li class="nav-item" id="nav_login">
-              <a class="nav-link" href="index.html">log in</a>
+              <a class="nav-link" href="../index.html">log in</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    
+      <!-- MAIN CONTEXT -->
+
     <div class="container body_content">
-      <div class="row " id="content_holder">
-        <div class="d-flex col-12 ms-2  mb-3 p-sm-2 products" id="main_content">
-          <!-- GRID + CARDS FROM BOOTSTRAP5 == 
-          https://getbootstrap.com/docs/5.0/components/card/ 
-           -->
-          <div class="container main_news pb-3 ps-3 ">
-            <div class="row " id="product_list">
+      <div class="row" id="content_holder">
+        <div class="d-flex col-12 col-sm-8 col-lg-8 mb-sm-0 mb-3 p-sm-2" id="main_content">
+
+          <div class="container main_news">
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center">
+                    <h3>PRODUCT 1 NAME</h3>
+                </div>
+                <div class="col-8 d-flex justify-content-center">
+                    <p>Product description </p>
+                </div>
+                
+                <div class="col-3 d-flex justify-content-center">
+                    <img src="../../img/home/news_img/1-min.jpg" alt="product_1_img">
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex col-12 col-sm-3 col-lg-3 justify-content-center" id="side_content">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2>usefull infromation</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>here is current most popular products</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>parking censors</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+
+    <!-- FOOTER -->
+
   <footer>
     <div class="container" id="foot">
       <div class="row align-content-lg-center">
@@ -87,8 +124,6 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/jquery-3.6.0.min.js"></script>
-  <!-- <script src="../js/pagination.min.js"></script> -->
-  <script src="../js/store.js"></script>
+  <script src="../../js/home.js"></script>
+  <script src="../../js/main.js"></script>
 </html>
