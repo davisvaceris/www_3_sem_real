@@ -1,4 +1,5 @@
- var products_list= document.getElementById('product_list');
+// add product list with div 
+var products_list= document.getElementById('product_list');
 for (var i = 1; i <122; i++) {
 	var element_1= document.createElement('p');
 	element_1.appendChild(document.createTextNode('Product ' + i+' small description')); 
@@ -14,18 +15,15 @@ for (var i = 1; i <122; i++) {
 	products_list.appendChild(element_4);
 	
 }
+// add product classes 
     var products = document.getElementsByClassName('product');
     for (var i = 0; i < products.length;i++) {
-            products[i].classList.add('me-sm-3');
-            products[i].classList.add('me-0');
-            products[i].classList.add('col-md-3');
-            products[i].classList.add('col-sm-4');
-            products[i].classList.add('col-11');
+            products[i].classList.add('me-sm-3','me-0','col-md-3','col-sm-4','col-11');
     }
 
 	var products = document.getElementsByClassName('product');
 
-
+// pagination for products 
 	(function($) {
 		var pagify = {
 			items: {},

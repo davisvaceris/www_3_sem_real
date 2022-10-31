@@ -127,3 +127,4 @@ pagination[0].classList.add('col-12');
 pagination[0].classList.add('d-flex');
 pagination[0].classList.add('justify-content-center');
 //pagination for news articles // // // / END // / / // 
+

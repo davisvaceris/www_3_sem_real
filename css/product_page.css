@@ -1,3 +1,17 @@
 img{
     width: 250px;
 }
+.product_main_desc{
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 20px;
+    text-indent: 40px;
+    text-align: justify ;
+}
+.product_main_desc::first-letter{
+    font-size: 28px;
+}
+.product_desc{
+    text-indent: 40px;
+    text-align: justify ;
+}
