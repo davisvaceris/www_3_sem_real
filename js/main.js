@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function(){
           last_scroll_top = scroll_top;
     }); 
   }
-  console.log('HELPE R NEE DED ASA P ');
 }); 
 // DOMContentLoaded  end
 
