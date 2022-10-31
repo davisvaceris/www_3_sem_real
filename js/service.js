@@ -1,6 +1,9 @@
 
 
-//pagination for news articles // // // / START // / / // 
+
+
+
+//pagination for services 
 (function($) {
     var pagify = {
         items: {},
@@ -119,11 +122,9 @@
     };
 })(jQuery);
 
-$(".products").pagify(6, ".product");
-
+$(".services").pagify(5, ".product");
 //change pagination classes, add bootstrap classes 
 var pagination =document.getElementsByClassName('pagination');
 pagination[0].classList.add('col-12');
 pagination[0].classList.add('d-flex');
 pagination[0].classList.add('justify-content-center');
-//pagination for news articles // // // / END // / / // 
