@@ -1,10 +1,22 @@
 // add product list with div 
 var products_list= document.getElementById('product_list');
 for (var i = 1; i <122; i++) {
+
+
 	var element_1= document.createElement('p');
-	element_1.appendChild(document.createTextNode('Product ' + i+' small description')); 
 	var element_2=document.createElement('h3');
-	element_2.appendChild(document.createTextNode('Product ' + i+' name'));
+	if(i==1){
+		element_1.appendChild(document.createTextNode('Annuly plan price may vary depending on choosing of plan users '));
+		var element_02=document.createElement('span');
+		element_02.appendChild(document.createTextNode('Starting from ONLY €1.99'));
+		element_02.classList.add('price');
+		element_1.appendChild(element_02);
+		element_2.appendChild(document.createTextNode('Security'));
+	}
+	else{
+		element_1.appendChild(document.createTextNode('Product ' + i+' small description')); 
+		element_2.appendChild(document.createTextNode('Product ' + i+' name'));
+	}
 	var element_3= document.createElement("a")
 	element_3.href = "products/product-"+i+".html";
 	element_3.appendChild(element_2);
