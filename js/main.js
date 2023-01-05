@@ -41,6 +41,7 @@ nav_logout.onclick =() => {
     LoginLogout(nav_login, nav_user);
     deleteAllCookies(); // clear all cookies
     sessionStorage.clear(); //clear all sessionStorage
+    window.location.replace('index.html');
 
   };
 

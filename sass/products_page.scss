@@ -1,5 +1,6 @@
 img{
-    width: 250px;
+    width: 260px;
+    height:90%;
 }
 .product_main_desc{
     font-size: 15px;
@@ -14,4 +15,50 @@ img{
 .product_desc{
     text-indent: 40px;
     text-align: justify ;
+}
+
+.saving{
+    color: #259125;
+    font-weight: bold;
+}
+#side_content {
+    h2{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h3{
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:575px){
+    
+}
+//
+// phone
+//
+@media screen and (min-width:576px) and (max-width:767px){
+    
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    img{
+        width: 260px;
+        height:140px;
+    }
+}
+//
+//monitors
+//
+@media screen and (min-width:992px){
+
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+    #side_content {
+        height: 1100px;
+    }
+}
+@media screen and (min-width:1200px){
+    #side_content{
+        height: 900px;
+    }   
 }

@@ -31,7 +31,7 @@ register.onclick=() => {
     if(!em&&!us_bol&&!pas_bol&&password.value==password_repeat.value){
         document.body.style.cursor='wait';
         console.log("Registred successfully");
-        window.location.replace('index.html');
+        window.location.replace('login.html');
 
     }
 };
