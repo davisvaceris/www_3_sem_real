@@ -76,4 +76,29 @@ function deleteAllCookies() {
       document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT ;path=/";
   }
 }
-  
+
+// 
+// MODAL for privacy and cookies  in footer
+//
+
+  // Get the modal
+
+  var span = document.getElementById("modal-close");
+  var Cookiemodal = document.getElementById("ModalCookie");
+  var PrivAndCook= document.getElementById("PrivAndCook");
+  // When the user clicks on the button, open the modal
+  PrivAndCook.onclick=()=>{
+    Cookiemodal.style.display = "block";
+  };
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  Cookiemodal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == Cookiemodal) {
+    Cookiemodal.style.display = "none";
+  }
+} 
