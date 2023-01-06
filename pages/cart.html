@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../img/tests.ico" type="image/x-icon">
+    <title>Home | Davis Vaceris</title>
+  </head>
+  <body>
+
+      <!-- NAVIGATION BAR -->
+
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light autohide">
+        <div class="container-fluid navbar_content">
+          <a class="navbar-brand ms-lg-5" href="index.html">HOME LOGO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-1 me-lg-5 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="store.html">store</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page"href="services.html">services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  about us
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown1">
+                  <li><a class="dropdown-item" href="news.html">news</a></li>
+                  <li><a class="dropdown-item" href="aboutUs.html">contacts</a></li>
+                  <li><a class="dropdown-item" href="chat.html">chat with us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown" id="nav_user">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  user
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown2">
+                  <li><a class="dropdown-item" href="profile.html">profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" id="nav_logout">logout</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" id="nav_login">
+                <a class="nav-link" href="login.html">log in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"href="cart.html"><i id="cartFull" class="bi bi-cart-fill"></i><i id="cartEmpty" class="bi bi-cart"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- MAIN CONTEXT -->
+
+    <div class="container body_content">
+      <div class="row products" id="content_holder">
+        <div class="col-12">
+            <table id="productCart" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Price per quantity</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+
+                </tbody>
+            </table>
+
+        </div>
+      </div>
+    </div>
+  </body>
+  
+
+  <!-- The Modal -->
+<div id="ModalCookie" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="modal-close" class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+    <!-- FOOTER -->
+
+  <footer>
+    <div class="container" id="foot">
+      <div class="row align-content-lg-center">
+        <div class="col-lg-5 col-12 col-sm-5">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2193.0753347166196!2d23.731674415333682!3d56.65576272945611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ef2544a622adcb%3A0x25e9c51fdb577a86!2sLiel%C4%81%20iela%202%2C%20Jelgava%2C%20LV-3001%2C%20Latvia!5e0!3m2!1sen!2sno!4v1663586226479!5m2!1sen!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="d-flex d-sm-block justify-content-center col-lg-4 col-12 col-sm-6 p-xxl-5 p-xl-2 p-lg-2 p-md-1 p-0 contacts">
+          <ul>
+            <li>Administrator: davis.vaceris@gmail.com</li>
+            <li>Conact address: <address>Lielā iela 2, Jelgava, LV-3001, Latvia</address></li>
+            <li>Concact number: +37123456789</li>
+            <li>Contact e-mail: davis.vaceris@gmail.com</li>  
+          </ul>
+        </div>
+        <div class="d-flex d-lg-block justify-content-center col-lg-3 col-12  p-xxl-5  p-lg-2 p-md-1 p-0" id="PrivAndCook">
+              <p style="cursor:pointer; color: rgb(68, 0, 255); text-decoration: underline;">privacy & cookies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
+</html>
