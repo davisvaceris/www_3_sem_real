@@ -6,6 +6,12 @@ html{
         color:$txt-colo;
     }
 }
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 .login{
     display: block;
 }

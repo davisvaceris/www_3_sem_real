@@ -18,7 +18,7 @@ for (var i = 1; i <122; i++) {
 		element_2.appendChild(document.createTextNode('Product ' + i+' name'));
 	}
 	var element_3= document.createElement("a")
-	element_3.href = "products/product-"+i+".html";
+	element_3.href = "product-"+i+".html";
 	element_3.appendChild(element_2);
 	element_3.appendChild(element_1);
 	var element_4 = document.createElement('div');

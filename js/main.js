@@ -6,11 +6,11 @@ const nav_logout = document.getElementById('nav_logout');
 
 //check if user is login 
 if(getCookie('login') == 'true'||sessionStorage.getItem('login')=='true'){
-  LoginLogout(nav_user,nav_login);
+  HideShowElement(nav_user,nav_login,'login','logout');
 }
 //if user is NOT logged in
 else{
-  LoginLogout(nav_login, nav_user);
+  HideShowElement(nav_login, nav_user,'login','logout');
 }
 
 
@@ -38,18 +38,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 nav_logout.onclick =() => {
-    LoginLogout(nav_login, nav_user);
+    HideShowElement(nav_login, nav_user,'login','logout');
     deleteAllCookies(); // clear all cookies
     sessionStorage.clear(); //clear all sessionStorage
     window.location.replace('index.html');
 
   };
 
-function LoginLogout( login , logout) {
-  login.classList.add('login');
-  login.classList.remove('logout');
-  logout.classList.add('logout');
-  logout.classList.remove('login');
+function HideShowElement( showElement , hideElement, classShow, classHide) {
+  showElement.classList.add(classShow);
+  showElement.classList.remove(classHide);
+  hideElement.classList.add(classHide);
+  hideElement.classList.remove(classShow);
 };
 
 function getCookie(cookiename) {
@@ -102,3 +102,26 @@ window.onclick = function(event) {
     Cookiemodal.style.display = "none";
   }
 } 
+
+
+// cart check
+// hide if session prodyucts are empty 
+function IsSessionProducts(){
+  if(JSON.parse(sessionStorage.getItem("products"))!=null)
+   return true;
+  return false;
+  
+}
+var fullCart= document.getElementById('cartFull');
+var emptyCart= document.getElementById('cartEmpty');
+showCart();
+setInterval(showCart, 3000);
+function showCart(){
+  if(JSON.parse(sessionStorage.getItem("products"))!=null){
+    HideShowElement(fullCart,emptyCart,'show','hide');
+
+  }
+  else{
+    HideShowElement(emptyCart,fullCart,'show','hide');
+  }
+}

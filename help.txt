@@ -1,2 +1,3 @@
 modal text change for cookies and privacy
 change contentn of paragraphs everywhere 
+mobile on scroll hides nav bar and cannot hide on same button 
