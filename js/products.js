@@ -66,9 +66,29 @@ function addProductToCart(product, quantity){
     }
     sessionStorage.setItem('products', JSON.stringify(newProduct));
 }
-function RemoveProductFromCart(product,quantity) {
-    var newProducts;
+function RemoveProductFromCart(product) {
+    var newProducts=[];
+    var j = 0;
     var prevProducts = JSON.parse(sessionStorage.getItem('products'));
+    for(var i=0; i<prevProducts.length; i++){
+        if(prevProducts[i].name!=product&&prevProducts[i].quantity>1){
+            newProducts[j]={'name':prevProducts[i].name, 'quantity':prevProducts[i].quantity};
+            j++;
+        }
+        // new quantity
+        else if(prevProducts[i].quantity>1){
+            newProducts[j]={'name':product, 'quantity':prevProducts[i].quantity-1};
+            j++;
+        }
+        else{
+
+        }
+    }
+    if(newProducts==undefined){
+        sessionStorage.removeItem('products');
+    }
+    else
+    sessionStorage.setItem('products', JSON.stringify(newProducts));
 
     // if quantity is 0 delete product
 
@@ -113,6 +133,7 @@ function RefreshCartTable(){
             AddRow(tr, GetPriceByName(prices, products[i].name)+'€')
             AddRow(tr, products[i].quantity)
             AddRow(tr, ((GetPriceByName(prices,products[i].name))*products[i].quantity)+'€')
+            addRemoveButton(tr, products[i].name)
             cartTable.appendChild(tr)
         }
 
@@ -144,14 +165,16 @@ function AddRow(element, value){
     element.appendChild(row1)
 }
 function addRemoveButton(element, value){
+
     var row1 = document.createElement('td');
     var button  = document.createElement('button');
-    button.onclick = removeProduct(value);
-    row1.innerHTML = value
+    button.onclick = ()=>{RemoveProductFromCart(value);};
+    button.innerHTML = 'Remove from cart';
+    button.classList.add('btn');
+    button.classList.add('btn-warning');
+    button.id=value.toLower+'_remove';
+    row1.appendChild(button);
     element.appendChild(row1)
-}
-function removeProduct(product_name){
-    RefreshCartTable();
 }
 
 //get info form prices 
@@ -170,3 +193,8 @@ function GetIdByName(prices, productName){
     return id;
   }
 
+  function GetSessionProductIDByName(product_name){
+    
+    var prevProducts= JSON.parse(sessionStorage.getItem('products'));
+
+  }
