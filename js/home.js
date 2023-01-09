@@ -131,3 +131,19 @@ pagination[0].classList.add('justify-content-center');
 
 
 // if max width is 992 or less then move products class to one lover 
+    var side_content= document.getElementById("side_content");
+    var pagination = document.getElementsByClassName("body_content")[0];
+    var content_holder = document.getElementById("content_holder");
+if(window.innerWidth<=992){
+    pagination.appendChild(side_content);
+}
+
+addEventListener("resize",(event)=>{});
+onresize = (event)=>{
+    if(window.innerWidth<=992){
+pagination.appendChild(side_content);
+    }
+    else{
+        content_holder.appendChild(side_content);
+    }
+};
