@@ -121,6 +121,7 @@
 
 $(".products").pagify(6, ".product");
 
+
 //change pagination classes, add bootstrap classes 
 var pagination =document.getElementsByClassName('pagination');
 pagination[0].classList.add('col-12');
@@ -128,3 +129,5 @@ pagination[0].classList.add('d-flex');
 pagination[0].classList.add('justify-content-center');
 //pagination for news articles // // // / END // / / // 
 
+
+// if max width is 992 or less then move products class to one lover 
