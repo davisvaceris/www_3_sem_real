@@ -102,13 +102,23 @@ function RefreshCartTable(){
     var cartTable= document.getElementById('productTable');
     var products =JSON.parse(sessionStorage.getItem("products"))
     if(products!=null){
+        // remove existing table content
+        // create and add new table content
+        var oldtd = document.querySelectorAll('.cartProductTable');
+        get.forEach(element => {
+         element.remove();
+        });
         if(document.getElementById('noCart') != null){
         var nocart = document.getElementById('noCart')
         cartTable.removeChild(nocart)}
         // create row for table
         for(var i=0; i<products.length; i++){
             var tr = document.createElement('tr')
+            tr.classList.add('cartProductTable');
             AddRow(tr, products[i].name)
+            AddRow(tr, GetPriceByName(prices, products[i].name))
+            AddRow(tr, products[i].quantity)
+            AddRow(tr, GetPriceByName(prices,products[i].name)*products[i].price)
         }
 
         // <tr>
@@ -136,6 +146,12 @@ function RefreshCartTable(){
 }
 function AddRow(element, value){
     var row1 = document.createElement('td');
+    row1.innerHTML = value
+    element.appendChild(row1)
+}
+function addRemoveButton(element, value){
+    var row1 = document.createElement('td');
+    var button  = document.createElement('button');
     row1.innerHTML = value
     element.appendChild(row1)
 }
