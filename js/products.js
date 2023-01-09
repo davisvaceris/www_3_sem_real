@@ -35,9 +35,7 @@ function addProductToCart(product, quantity){
     var newProduct;
     var prevProducts= JSON.parse(sessionStorage.getItem('products'));
     if(prevProducts!=null){
-        console.log('is session')
         if(ProductExists(product)){
-            console.log('is product is session')
             for(var i=0; i<prevProducts.length; i++){
                 if(prevProducts[i].name!=product){
                     prevProducts[i]={'name':prevProducts[i].name, 'quantity':prevProducts[i].quantity};
@@ -50,7 +48,6 @@ function addProductToCart(product, quantity){
         }
         // not existing product
         else{
-            console.log('no product is session')
             var l = prevProducts.length;
             for(var i=0; i<l+1; i++){
                 if(i!=prevProducts.length){
@@ -65,7 +62,6 @@ function addProductToCart(product, quantity){
         var newProduct=prevProducts;
     }
     else{
-        console.log('no session')
     var newProduct = [{'name': product, 'quantity':quantity}]
     }
     sessionStorage.setItem('products', JSON.stringify(newProduct));
@@ -84,11 +80,9 @@ function ProductExists(product) {
     var i;
     for (i = 0; i < products.length; i++){
         if(products[i].name==product){
-            console.log(true);
             return true;
         }
     }
-    console.log(false);
     return false;
 }
 
@@ -105,7 +99,7 @@ function RefreshCartTable(){
         // remove existing table content
         // create and add new table content
         var oldtd = document.querySelectorAll('.cartProductTable');
-        get.forEach(element => {
+        oldtd.forEach(element => {
          element.remove();
         });
         if(document.getElementById('noCart') != null){
@@ -116,9 +110,10 @@ function RefreshCartTable(){
             var tr = document.createElement('tr')
             tr.classList.add('cartProductTable');
             AddRow(tr, products[i].name)
-            AddRow(tr, GetPriceByName(prices, products[i].name))
+            AddRow(tr, GetPriceByName(prices, products[i].name)+'€')
             AddRow(tr, products[i].quantity)
-            AddRow(tr, GetPriceByName(prices,products[i].name)*products[i].price)
+            AddRow(tr, ((GetPriceByName(prices,products[i].name))*products[i].quantity)+'€')
+            cartTable.appendChild(tr)
         }
 
         // <tr>
@@ -131,7 +126,6 @@ function RefreshCartTable(){
         
 
 
-       //cartTable.appendChild(tr)
     }
     else{ 
         var cartTable= document.getElementById('productTable');  
@@ -152,8 +146,12 @@ function AddRow(element, value){
 function addRemoveButton(element, value){
     var row1 = document.createElement('td');
     var button  = document.createElement('button');
+    button.onclick = removeProduct(value);
     row1.innerHTML = value
     element.appendChild(row1)
+}
+function removeProduct(product_name){
+    RefreshCartTable();
 }
 
 //get info form prices 
