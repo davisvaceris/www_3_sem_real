@@ -4,331 +4,105 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/products_page.css">
     <link rel="icon" href="../img/tests.ico" type="image/x-icon">
-    <title>Home | Davis Vaceris</title>
+    <title>Digital Piracy | Davis Vaceris</title>
   </head>
   <body>
 
       <!-- NAVIGATION BAR -->
 
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light autohide">
-        <div class="container-fluid navbar_content">
-          <a class="navbar-brand ms-lg-5" href="index.html">HOME LOGO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav ms-auto my-2 my-lg-1 me-lg-5 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="store.html">store</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page"href="services.html">services</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  about us
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown1">
-                  <li><a class="dropdown-item" href="news.html">news</a></li>
-                  <li><a class="dropdown-item" href="aboutUs.html">contacts</a></li>
-                  <li><a class="dropdown-item" href="chat.html">chat with us</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown" id="nav_user">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  user
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown2">
-                  <li><a class="dropdown-item" href="profile.html">profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#" id="nav_logout">logout</a></li>
-                </ul>
-              </li>
-              <li class="nav-item" id="nav_login">
-                <a class="nav-link" href="login.html">log in</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page"href="cart.html"><i id="cartFull" class="bi bi-cart-fill"></i><i id="cartEmpty" class="bi bi-cart"></i></a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light autohide">
+      <div class="container-fluid navbar_content">
+        <a class="navbar-brand ms-lg-5" href="index.html">HOME LOGO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav ms-auto my-2 my-lg-1 me-lg-5 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="store.html">store</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" aria-current="page"href="services.html">services</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                about us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown1">
+                <li><a class="dropdown-item" href="#">news</a></li>
+                <li><a class="dropdown-item" href="#">contacts</a></li>
+                <li><a class="dropdown-item" href="#">chat with us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" id="nav_user">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                user
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown2">
+                <li><a class="dropdown-item" href="">profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" id="nav_logout">logout</a></li>
+              </ul>
+            </li>
+            <li class="nav-item" id="nav_login">
+              <a class="nav-link" href="login.html">log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"href="cart.html"><i id="cartFull" class="bi bi-cart-fill"></i><i id="cartEmpty" class="bi bi-cart"></i></a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     
       <!-- MAIN CONTEXT -->
 
     <div class="container body_content">
-      <div class="row products" id="content_holder">
-        <div class="d-flex col-12 col-lg-8 mb-sm-0 mb-3 p-sm-2 " id="main_content">
+      <div class="row" id="content_holder">
+        <div class="d-flex col-12 col-md-8 col-lg-8 mb-md-0 mb-3 p-md-2 justify-content-center" id="main_content">
 
-          <div class="container main_news ">
-            <div class="row">
-              <div class=" col-11 product">
-                <a href="paragraph-1.html">
-                <h3>digital piracy</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/1-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>Google and Facebook are increasingly joining forces to deploy anti-ad campaigns as part of their strategies to combat digital piracy. </p>
-                  </div>
+          <div class="container main_news">
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center">
+                    <h3>Digital Piracy</h3>
                 </div>
-                </a>
-              </div>
-              <div class="col-11 product">
-                <a href="paragraph-2.html">
-                <h3>Server Room</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/2-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>We are a professional cooling company in Hyderabad , India, that has been offering cooling services to hotels 
-                      in all over India for the last 10 years. We have an extensive network of hotels and other properties in different 
-                      parts of India and we are able to provide you with cooling and heating solutions that meet your needs.</p>
-                  </div>
+                <div class="col-12 d-flex col-lg-8 me-0 me-lg-5">
+                    <p class="product_main_desc">Google and Facebook are increasingly joining forces to deploy anti-ad campaigns as part of their strategies to combat digital piracy. </p>
                 </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="paragraph-3.html">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/3-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
+                <div class="col-12 col-lg-3 d-flex justify-content-center">
+                    <img src="../img/home/news_img/1-min.jpg" alt="product_1_img">
                 </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="paragraph-4.html">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/4-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
+                <div class="product_desc">
+                  Google and Facebook are increasingly joining forces to deploy anti-ad campaigns as part of their strategies to combat digital piracy. 
+                  The social network giant and the search engine giant are collaborating on new ways to protect their users' data. Both companies are now 
+                  offering to pay for anti piracy campaigns to be run on their sites. Facebook is also offering a free version of a service that will 
+                  allow users to check if their friends have been pirated. <br>
+                  In addition, Google is launching a new anti pirating service. Google's free anti ad campaign will run for 30 days, starting in April. 
+                  Users will have to enter their email address and password. They will be asked to click the ad to see whether they have received a message 
+                  from Google or if they are a friend of someone who has been reported to the site as pirater. If they click a link, a message will appear on a 
+                  user's screen. It will ask if users are friends of piraters and will offer them a choice between paying a $5 fee or having their data wiped clean.
+                  Google's anti copyright campaign was launched in February.<p>
+                    In a statement, Google said it had removed the links from the search results. "This is a common practice for many websites," 
+                    it said in its statement. In its first year of operation, it removed more links than it did in all of 2005. (C) Copyright 2005- 
+                    Google has removed links to a number of websites, including some that are no longer available, from search result results on its search engine. 
+                    It also removed some links on some of these websites. Google's search engines have also been criticised for linking to websites that have been 
+                    removed by copyright holders.
+                    </p>
                 </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/5-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/6-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/7-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/8-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/9-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/10-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/11-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/12-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/10-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/11-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/12-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/10-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/11-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-              <div class="col-11 product">
-                <a href="#paragraph">
-                <h3>NEWS HEADING</h3>
-                <div class="row">
-                  <div class="news_images pb-sm-2 pb-0 col-xl-3 col-md-5 col-12">
-                    <img src="../img/home/news_img/12-min.jpg" />
-                  </div>
-                  <div class="news_paragraph_summary pt-3 pt-sm-0 col-12 col-md-7 col-xl-9">
-                    <p>news small paragraph </p>
-                  </div>
-                </div>
-              </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex col-12 col-lg-3 justify-content-center" id="side_content">
-          <div class="container side_container">
-            <div class="row">
-              <div class="col">
-                <h2>usefull infromation</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p>here is current most popular products</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p>parking censors</p>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
-  
+
+
 
   <!-- The Modal -->
   <div id="ModalCookie" class="modal">
@@ -529,14 +303,15 @@
           </ul>
         </div>
         <div class="d-flex d-lg-block justify-content-center col-lg-3 col-12  p-xxl-5  p-lg-2 p-md-1 p-0" id="PrivAndCook">
-              <p style="cursor:pointer; color: rgb(68, 0, 255); text-decoration: underline;">privacy & cookies</p>
+              <p>privacy & cookies</p>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="../js/jquery-3.6.0.min.js"></script>
-  <script src="../js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
   <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
 </html>
