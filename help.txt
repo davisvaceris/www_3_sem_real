@@ -1,6 +1,7 @@
 modal text change for cookies and privacy
 change contentn of paragraphs everywhere 
-mobile on scroll hides nav bar and cannot hide on same button 
+submit button resets everything, need to custom reset and show message on submit
+https://www.freepik.com/free-vector/ict-information-communication-technologies-big-text-word-people-around-with-modern-isometric-style_36332286.htm#query=cloud%20server&position=9&from_view=search&track=sph
 
 
 word document
