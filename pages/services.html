@@ -47,6 +47,9 @@
             <li class="nav-item" id="nav_login">
               <a class="nav-link" href="login.html">log in</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"href="cart.html"><i id="cartFull" class="bi bi-cart-fill"></i><i id="cartEmpty" class="bi bi-cart"></i></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,8 +65,10 @@
           <div class="container main_news pb-3">
             <div class="row">
               <div class="col-12 product">
-                <h3>Service name</h3>
-                <p>Service description </p>
+                <a href="service-1.html">
+                  <h3>Networking planing</h3>
+                  <p>Request to make networking plan starting from <span style="color: green; font-size: 24px;">40€</span> </p>
+              </a>
               </div>
               <div class="col-12 product">
                 <h3>Service name</h3>
@@ -134,6 +139,22 @@
       </div>
     </div>
   </body>
+  
+
+  <!-- The Modal -->
+<div id="ModalCookie" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="modal-close" class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+    <!-- FOOTER -->
+
+
   <footer>
     <div class="container" id="foot">
       <div class="row align-content-lg-center">
@@ -149,8 +170,8 @@
           </ul>
         </div>
         <div class="d-flex d-lg-block justify-content-center col-lg-3 col-12  p-xxl-5  p-lg-2 p-md-1 p-0" id="PrivAndCook">
-              <p>privacy & cookies</p>
-          </div>
+          <p style="cursor:pointer; color: rgb(68, 0, 255); text-decoration: underline;">privacy & cookies</p>
+      </div>
         </div>
       </div>
     </div>
