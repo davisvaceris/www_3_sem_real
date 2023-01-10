@@ -9,6 +9,12 @@ switch (htmlname)
     case 'cart.html':
         RefreshCartTable()
         setInterval(RefreshCartTable, 5000);
+        var buy = document.getElementById('buy');
+        buy.onclick = ()=>{
+            alert('You bought everything on cart');
+            sessionStorage.removeItem('products');
+            window.location.replace('index.html');
+        }
 
     break;
     case 'product-1.html':
