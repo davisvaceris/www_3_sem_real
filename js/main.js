@@ -84,6 +84,7 @@ function deleteAllCookies() {
   // Get the modal
 
   var span = document.getElementById("modal-close");
+  var span2 = document.getElementsByClassName("modal-close-bottom")[0];
   var Cookiemodal = document.getElementById("ModalCookie");
   var PrivAndCook= document.getElementById("PrivAndCook");
   // When the user clicks on the button, open the modal
@@ -93,6 +94,9 @@ function deleteAllCookies() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
+  Cookiemodal.style.display = "none";
+}
+span2.onclick = function() {
   Cookiemodal.style.display = "none";
 }
 
