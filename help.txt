@@ -1,4 +1,4 @@
-change content of paragraphs everywhere  2/4
+
 submit button resets everything, need to custom reset and show message on submit\
 change content in profile.html page 
 https://www.freepik.com/free-vector/ict-information-communication-technologies-big-text-word-people-around-with-modern-isometric-style_36332286.htm#query=cloud%20server&position=9&from_view=search&track=sph
@@ -15,6 +15,6 @@ word document
 		pages: 10 +3
 			
 	11.01.2023
-		words: 
-		pages:		
+		words: 1379
+		pages: 14	
 	
