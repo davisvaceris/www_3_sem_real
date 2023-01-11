@@ -177,16 +177,6 @@ function RefreshCartTable(){
         
 
 
-        // <tr>
-        //     <th scope="col">Product Name</th>
-        //     <th scope="col">Price per quantity</th>
-        //     <th scope="col">Quantity</th>
-        //     <th scope="col">Total</th>
-        //     <th scope="col">Remove</th>
-        // </tr>
-        
-
-
         buy.disabled=false;
     }
     else{ 
