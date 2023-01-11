@@ -11,6 +11,7 @@ const username_regex = new RegExp (/[a-zA-Z][a-zA-Z0-9-_]{5,32}/i);
 const password_regex = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{7,32}/i);
 
 
+// register check regex values
 register.onclick=() => {
     var us_bol= !username_regex.test(username.value)
     var pas_bol= !password_regex.test(password.value)
@@ -36,6 +37,7 @@ register.onclick=() => {
     }
 };
 
+// add classes to element 
 function AcceptOrReject(element, option1, option2){
     if(element.classList.contains(option1)){}
     else if( element.classList.contains(option2)){element.classList.replace(option2, option1);}

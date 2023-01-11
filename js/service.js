@@ -128,7 +128,7 @@ var htmlname= htmlnamefull.substring(htmlIndex);
 
 
 
-
+// check current page
 switch (htmlname)
 {
     case 'services.html':

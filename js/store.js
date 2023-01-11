@@ -154,6 +154,7 @@ for (var i = 1; i <122; i++) {
 		};
 	})(jQuery);
 	
+	//add classes pagination 
 	$(".products").pagify(26, ".product");
 	var products =document.getElementsByClassName('pagination');
 	products[0].classList.add('col-12');
