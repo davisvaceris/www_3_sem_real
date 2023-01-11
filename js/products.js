@@ -157,7 +157,7 @@ function RefreshCartTable(){
                 AddRowLast(tr,"TOTAL")
                 AddRowLast(tr, " ")
                 AddRowLast(tr, totalCount)
-                AddRowLast(tr, sum+'€')
+                AddRowLast(tr, sum.toFixed(2)+'€')
                 AddRowLast(tr, " ")
                 total.appendChild(tr);
             }
@@ -165,9 +165,9 @@ function RefreshCartTable(){
 
                 AddRow(tr, products[i].name)
                 AddRow(tr, GetPriceByName(prices, products[i].name)+'€')
-                totalCount+=products[i].quantity;
+                totalCount+=products[i].quantity
                 AddRow(tr, products[i].quantity)
-                AddRow(tr, ((GetPriceByName(prices,products[i].name))*products[i].quantity)+'€');
+                AddRow(tr, ((GetPriceByName(prices,products[i].name))*products[i].quantity).toFixed(2)+'€');
                 sum+=((GetPriceByName(prices,products[i].name))*products[i].quantity);
                 addRemoveButton(tr, products[i].name);
                 cartTable.appendChild(tr);
@@ -208,6 +208,7 @@ function AddRow(element, value){
 function AddRowLast(element, value){
     var row1 = document.createElement('td');
     row1.innerHTML = value
+    row1.style.fontWeight= 'bold'
     element.appendChild(row1)
 }
 function addRemoveButton(element, value){
