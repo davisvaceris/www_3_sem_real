@@ -44,6 +44,10 @@ switch (htmlname)
             })
                     
         break;
+      case 'profile.html':
+        var grettings= document.getElementById('hello');
+        grettings.innerHTML = 'Hello '+sessionStorage.getItem('username') + '!';
+        break;
 }
 function hide(element_1, element_2, element_3){
     element_1.classList.remove('hide');
