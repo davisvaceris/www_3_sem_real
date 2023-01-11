@@ -29,6 +29,18 @@ switch (htmlname)
         PrivBuis.onclick=()=>{addProductToCart('Privacy_buisness',1);};
         PrivEnter.onclick=()=>{addProductToCart('Privacy_enterprise',1);};
         break;
+    case 'product-2.html':
+        var PrivPers= document.getElementById("Server-personal");
+        var PrivFami= document.getElementById("Server-family");
+        var PrivsBuis= document.getElementById("Server-sbuisness");
+        var PrivBuis= document.getElementById("Server-buisness");
+        var PrivEnter= document.getElementById("Server-enterprise");
+        PrivPers.onclick=()=>{addProductToCart('Server_personal',1);};
+        PrivFami.onclick=()=>{addProductToCart('Server_family',1);};
+        PrivsBuis.onclick=()=>{addProductToCart('Server_small_buisness',1);};
+        PrivBuis.onclick=()=>{addProductToCart('Server_buisness',1);};
+        PrivEnter.onclick=()=>{addProductToCart('Server_enterprise',1);};
+        break;
 }
 
 
@@ -116,10 +128,12 @@ function ProductExists(product) {
 function RefreshCartTable(){
     var prices= {
         name:['Privacy_personal','Privacy_family','Privacy_small_buisness','Privacy_buisness',
-    'Privacy_enterprise'],
-    prices:[1.99,7.99,34.83,110.50,188.96]
+    'Privacy_enterprise','Server_personal','Server_family','Server_small_buisness','Server_buisness',
+    'Server_enterprise'],
+    prices:[1.99,7.99,34.83,110.50,188.96,4.99,17.99,75.83,160.5,213.96]
     };
     var cartTable= document.getElementById('productTable');
+    var total= document.getElementById('productTableTotal');
     var products =JSON.parse(sessionStorage.getItem("products"))
     if(products!=null){
         // remove existing table content
@@ -132,16 +146,36 @@ function RefreshCartTable(){
         var nocart = document.getElementById('noCart')
         cartTable.removeChild(nocart)}
         // create row for table
-        for(var i=0; i<products.length; i++){
+            var totalCount=0;
+            var sum =0;
+        
+        for(var i=0; i<=products.length; i++){
+            
             var tr = document.createElement('tr')
             tr.classList.add('cartProductTable');
-            AddRow(tr, products[i].name)
-            AddRow(tr, GetPriceByName(prices, products[i].name)+'€')
-            AddRow(tr, products[i].quantity)
-            AddRow(tr, ((GetPriceByName(prices,products[i].name))*products[i].quantity)+'€')
-            addRemoveButton(tr, products[i].name)
-            cartTable.appendChild(tr)
+            if(i==products.length){
+                AddRowLast(tr,"TOTAL")
+                AddRowLast(tr, " ")
+                AddRowLast(tr, totalCount)
+                AddRowLast(tr, sum+'€')
+                AddRowLast(tr, " ")
+                total.appendChild(tr);
+            }
+            else{
+
+                AddRow(tr, products[i].name)
+                AddRow(tr, GetPriceByName(prices, products[i].name)+'€')
+                totalCount+=products[i].quantity;
+                AddRow(tr, products[i].quantity)
+                AddRow(tr, ((GetPriceByName(prices,products[i].name))*products[i].quantity)+'€');
+                sum+=((GetPriceByName(prices,products[i].name))*products[i].quantity);
+                addRemoveButton(tr, products[i].name);
+                cartTable.appendChild(tr);
+            }
         }
+        
+        
+
 
         // <tr>
         //     <th scope="col">Product Name</th>
@@ -161,13 +195,17 @@ function RefreshCartTable(){
         var heading=document.createElement('div');
                 heading.appendChild(document.createTextNode('No products found!'))
                         heading.id='noCart'
-                console.log(cartTable.childNodes.length==1)
           cartTable.appendChild(heading);
           buy.disabled=true;
         }
     }
 }
 function AddRow(element, value){
+    var row1 = document.createElement('td');
+    row1.innerHTML = value
+    element.appendChild(row1)
+}
+function AddRowLast(element, value){
     var row1 = document.createElement('td');
     row1.innerHTML = value
     element.appendChild(row1)
