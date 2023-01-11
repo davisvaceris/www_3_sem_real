@@ -7,9 +7,9 @@ var htmlname= htmlnamefull.substring(htmlIndex);
 switch (htmlname)
 {
     case 'cart.html':
+        var buy = document.getElementById('buy');
         RefreshCartTable()
         setInterval(RefreshCartTable, 5000);
-        var buy = document.getElementById('buy');
         buy.onclick = ()=>{
             alert('You bought everything on cart');
             sessionStorage.removeItem('products');
@@ -153,6 +153,7 @@ function RefreshCartTable(){
         
 
 
+        buy.disabled=false;
     }
     else{ 
         var cartTable= document.getElementById('productTable');  
@@ -162,6 +163,7 @@ function RefreshCartTable(){
                         heading.id='noCart'
                 console.log(cartTable.childNodes.length==1)
           cartTable.appendChild(heading);
+          buy.disabled=true;
         }
     }
 }
