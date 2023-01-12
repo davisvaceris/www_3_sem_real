@@ -15,10 +15,10 @@ word document
 		pages: 10 +3
 			
 	11.01.2023
-		words: 1379 + 323
+		words: 1379 +323
 		pages: 14	+4
 		
 	12.01.2023
-		words: 
-		pages: 
+		words: 1904 +525
+		pages: 15 +1
 	
