@@ -13,6 +13,14 @@ for (var i = 1; i <122; i++) {
 		element_1.appendChild(element_02);
 		element_2.appendChild(document.createTextNode('Security'));
 	}
+	else if(i==2){
+		element_1.appendChild(document.createTextNode('Annuly plan price may vary depending on choosing of plan users '));
+		var element_02=document.createElement('span');
+		element_02.appendChild(document.createTextNode('Starting from ONLY €4.99'));
+		element_02.classList.add('price');
+		element_1.appendChild(element_02);
+		element_2.appendChild(document.createTextNode('Server'));
+	}
 	else{
 		element_1.appendChild(document.createTextNode('Product ' + i+' small description')); 
 		element_2.appendChild(document.createTextNode('Product ' + i+' name'));
