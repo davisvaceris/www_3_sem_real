@@ -10,6 +10,11 @@
     <link rel="icon" href="../img/tests.ico" type="image/x-icon">
     <title>Product-1 | Davis Vaceris</title>
   </head>
+  <style>
+    .row{
+    --bs-gutter-x:0rem !important
+}
+  </style>
   <body>
 
       <!-- NAVIGATION BAR -->
@@ -60,57 +65,55 @@
     </nav>
     
       <!-- MAIN CONTEXT -->
-  <div class="">
-    <h3 id="hello" class="ms-3 col-4"></h3>
-  <div id="info">
-
-  </div>
-      <div class="col-12">
-        <form >
-          <div class="">
-            <label for="nameInput" class="form-label">Name</label>
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-4">
+            <h3 id="hello" class="ms-3"></h3>
           </div>
-          <div class="field">
-            <input id="nameInput" type="text" class="form-control profile-change" aria-describedby="emailHelp">
-          </div>
-          <div class="">
-            <label for="surnameInput" class="form-label">Surname</label>
-          </div>
-          <div class="field">
-            <input id="surnameInput" type="text" class="form-control profile-change" aria-describedby="emailHelp">
-          </div>
-          <div class="">
-            <label for="emailInput" class="form-label">Email</label>
-          </div>
-          <div class="field">
-            <input id="emailInput" type="email" class="form-control profile-change">
-          </div>
-          <div class="">
-            <small></small>
-          </div>
-          <div class="">
-            <label for="passwordInput" class="form-label">Password</label>
-          </div>
-          <div class="field">
-            <input id="passwordInput" type="password" class="form-control profile-change">
-          </div>
-          <div class="">
-            <label for="password_repeatInput" class="form-label">Repeat Password</label>
-          </div>
-          <div class="field">
-            <input id="password_repeatInput" type="password" class="form-control profile-change">
-          </div>
-          <div class="container">
-            <div class="row justify-content-center mt-3">
-              <div class="col-4">
-                <a><button id="register" type="button" class="btn btn-success">Save</button></a>
-              </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-3">
+            <div id="info">
             </div>
           </div>
-      </form>
-   </div>  
-  </div>
-    
+        </div>
+        <div class="row d-flex justify-content-center align-items-center ">
+          <div class="col-lg-6 col-12 ">
+              <form class="form-inline justify-content-center text-center">
+                <div class="form-group">
+                  <label for="nameInput" class="form-label">Name</label>
+                  <input id="nameInput" type="text" class="form-control profile-change" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="surnameInput" class="form-label">Surname</label>
+                  <input id="surnameInput" type="text" class="form-control profile-change" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="emailInput" class="form-label">Email</label>
+                  <input id="emailInput" type="email" class="form-control profile-change">
+                </div>
+                <div class="form-group">
+                  <label for="passwordInput" class="form-label">Password</label>
+                  <input id="passwordInput" type="password" class="form-control profile-change">
+                </div>
+                <div class="form-group">
+                  <label for="password_repeatInput" class="form-label">Repeat Password</label>
+                  <input id="password_repeatInput" type="password" class="form-control profile-change">
+                </div>
+  
+                <div class="container">
+                  <div class="row justify-content-lg-start justify-content-lg-center mt-3">
+                    <div class="col-1">
+                      <a><button id="register" type="button" class="btn btn-success">Save</button></a>
+                    </div>
+                    <div class="mb-5">
+                    </div>
+                  </div>
+                </div>
+            </form>
+          </div> 
+        </div>
+      </div>
   </body>
 
     <!-- The Modal -->
