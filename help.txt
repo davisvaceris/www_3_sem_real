@@ -22,3 +22,11 @@ word document
 		words: 1904 +525
 		pages: 15 +1
 	
+	13.01.2023
+		words: 
+		pages: 
+	
+	14.01.2023
+		words: 
+		pages: 
+	
