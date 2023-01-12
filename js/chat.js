@@ -45,33 +45,30 @@ switch (htmlname)
                     
         break;
       case 'profile.html':
-        const password_regex = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{7,32}/gi);
-        const email_reg = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i);
-        const name_surname_regex = new RegExp(/[A-Z][a-z]+/gi);
+        const password_regex = new RegExp(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{7,32}/);
+        const email_reg = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/);
+        const name_surname_regex = new RegExp(/([A-Z][a-z]+)([\-\s]([A-Z][a-z]+))*/);
         var grettings= document.getElementById('hello');
-        var btn = document.getElementById('register');
+        const btn = document.getElementById('register');
 
         grettings.innerHTML = 'Hello '+sessionStorage.getItem('username') + '!';
+        
+          const name = document.getElementById('nameInput');
+          const surname = document.getElementById('surnameInput');
+          const email = document.getElementById('emailInput');
+          const passw = document.getElementById('passwordInput');
+          const passwrepeat = document.getElementById('password_repeatInput');
+          const info = document.getElementById('info');
         // check after save 
         btn.onclick = () => {
-          var name = document.getElementById('nameInput');
-          var surname = document.getElementById('surnameInput');
-          var email = document.getElementById('emailInput');
-          var passw = document.getElementById('passwordInput');
-          var passwrepeat = document.getElementById('password_repeatInput');
           // 0== false
           var accept= [0,0,0,0,0]
-          console.log(!name_surname_regex.test(name.value))
-          console.log(name.value)
-          console.log(name.value!='')
-          console.log(!name_surname_regex.test(name.value)&&name.value!='');
           var nsrn=!name_surname_regex.test(name.value);
           var nsrs=!name_surname_regex.test(surname.value);
           var ere=!email_reg.test(email.value);
           var prp =!password_regex.test(passw.value);
 
-            if(nsrn&&name.value!=''){
-              console.log("NAME");
+            if(nsrn&&name.value!=""){
               AcceptOrReject(name, "reject", "accept");
               accept[0]=false;
             }
@@ -82,7 +79,6 @@ switch (htmlname)
 
             
             if(nsrs&&surname.value!=""){
-              console.log("SURNAME");
               AcceptOrReject(surname, "reject", "accept");
               accept[1]=false;
             }
@@ -91,7 +87,6 @@ switch (htmlname)
               accept[1]=true;
             }
             if(ere&&email.value!=""){
-              console.log("EMAIL");
               AcceptOrReject(email, "reject", "accept");
               accept[2]=false;
             }
@@ -101,7 +96,6 @@ switch (htmlname)
               
             }
             if(prp&&passw.value!=""){
-              console.log("PASSW");
               AcceptOrReject(passw, "reject", "accept");
               accept[3]=false;
             }
@@ -109,8 +103,7 @@ switch (htmlname)
               AcceptOrReject(passw, "accept", "reject");
               accept[3]=true;
             }
-            if(!passw.value==passwrepeat.value||passwrepeat.value==null||passwrepeat.value==""&&passw.value!=""){
-              console.log("RE PASSWORD");
+            if(passw.value!=passwrepeat.value||passwrepeat.value==""&&passw.value!=""){
               AcceptOrReject(passwrepeat, "reject", "accept");
               accept[4]=false;
             }
@@ -118,8 +111,23 @@ switch (htmlname)
               AcceptOrReject(passwrepeat, "accept", "reject");
               accept[4]=true;
             }
-            if(accept[4]==true&&accept[3]==true&&accept[2]==true&&accept[1]==true&&accept[0]==true){
-            
+            // check all fields and if not empty
+
+            // if emty fields do nothing 
+            if(passw.value==""&&passwrepeat.value==""&&email.value==""&&name.value==""&&surname.value==""){
+              
+              info.innerHTML='Nothing to change';
+            }
+            else if(accept[4]==true&&accept[3]==true&&accept[2]==true&&accept[1]==true&&accept[0]==true){
+              passw.value="";
+              email.value="";
+              surname.value="";
+              name.value="";
+              passwrepeat.value="";
+              info.innerHTML='Info is changed!';
+            }
+            else{
+                info.innerHTML='Not correct fields';
             };
           }
 
