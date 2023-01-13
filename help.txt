@@ -23,10 +23,6 @@ word document
 		pages: 15 +1
 	
 	13.01.2023
-		words: 
-		pages: 
-	
-	14.01.2023
-		words: 
-		pages: 
+		words: 2508 +604
+		pages: 18 +3
 	
