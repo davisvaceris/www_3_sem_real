@@ -31,6 +31,7 @@ background: url("../img/bg_matrix.jpg") center center repeat;
 position: absolute;
 background-color:black;
 }
+/* register dialog == #body */
 #body{
     margin: 7% 35% 7%;
     height: 500px;
@@ -51,6 +52,7 @@ background-color:black;
 h1{
     text-align: center;
 }
+/* show if inouty is correct */
 .accept {
     border:2px solid #0f0;
 }

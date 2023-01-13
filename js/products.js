@@ -17,6 +17,7 @@ switch (htmlname)
 
     break;
     case 'product-1.html':
+        //adds to sessionStorage
         var PrivPers= document.getElementById("Privacy-personal");
         var PrivFami= document.getElementById("Privacy-family");
         var PrivsBuis= document.getElementById("Privacy-sbuisness");
@@ -29,6 +30,7 @@ switch (htmlname)
         PrivEnter.onclick=()=>{addProductToCart('Privacy_enterprise',1);};
         break;
     case 'product-2.html':
+        //adds to sessionStorage
         var PrivPers= document.getElementById("Server-personal");
         var PrivFami= document.getElementById("Server-family");
         var PrivsBuis= document.getElementById("Server-sbuisness");
@@ -172,9 +174,11 @@ function RefreshCartTable(){
                 cartTable.appendChild(tr);
             }
         }
+        // enable buy button
         buy.disabled=false;
     }
     else{ 
+        // if no products
         var cartTable= document.getElementById('productTable');  
         if(document.getElementById('noCart') == null){      
         var heading=document.createElement('div');

@@ -13,6 +13,7 @@ switch (htmlname)
 
     break;
     case 'news.html':
+      // custom library swiper for horizontal scroll slider
         var swiper = new Swiper(".mySwiper", {
             pagination: {
               el: ".swiper-pagination",
@@ -24,6 +25,7 @@ switch (htmlname)
             },
           });
 
+          // change text on slider img change
           var text_1 = document.getElementById('text_1');
           var text_2 = document.getElementById('text_2');
           var text_3 = document.getElementById('text_3');

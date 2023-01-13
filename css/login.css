@@ -29,6 +29,7 @@ position: absolute;
 background-color:black;
 }
 /* login  dialog */
+/* #body == login dialog */
 #body{
     margin: 7% 35% 7%;
     height: 350px;

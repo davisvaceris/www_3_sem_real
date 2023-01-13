@@ -9,15 +9,17 @@ var loginh = document.getElementById("login");
 var rememberMe = document.getElementById("rememberMe");
 
 function login(username, password) {
+    // check username 
     if (!username_regex.test(username)&&username!==("Davis")&&username!==("Inga")) {
         alert("Please enter a username");
     }
     else{
+        // if correct username check password
          if(!password_regex.test(password)&&password!==("Vaceris")&&password!==("Vilumsone")){
             alert("Please enter a password");
         }
         else{
-            //const usr = CryptoJS.AES.encrypt(username,"DAVIS");
+            // creates cookie or session on remember option 
             if(rememberMe.checked) {
                 setCookie("username",username,5)
                 setCookie("login",true,5)
@@ -27,6 +29,7 @@ function login(username, password) {
                 sessionStorage.setItem("login", true)
             }
             document.body.style.cursor='wait';
+            // send to main page
             setTimeout(()=>{window.location.replace('index.html');},1000);
         }
     }

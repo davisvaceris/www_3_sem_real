@@ -6,10 +6,12 @@ const nav_logout = document.getElementById('nav_logout');
 
 //check if user is login 
 if(getCookie('login') == 'true'||sessionStorage.getItem('login')=='true'){
+  // navigation profile is enabled
   HideShowElement(nav_user,nav_login,'login','logout');
 }
 //if user is NOT logged in
 else{
+  // navigation profile is disabled
   HideShowElement(nav_login, nav_user,'login','logout');
 }
 
