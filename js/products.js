@@ -1,4 +1,3 @@
-// dictionary with products and prices 
 
 // checks page 
 var htmlnamefull= document.URL;
@@ -18,6 +17,7 @@ switch (htmlname)
 
     break;
     case 'product-1.html':
+        //adds to sessionStorage
         var PrivPers= document.getElementById("Privacy-personal");
         var PrivFami= document.getElementById("Privacy-family");
         var PrivsBuis= document.getElementById("Privacy-sbuisness");
@@ -30,6 +30,7 @@ switch (htmlname)
         PrivEnter.onclick=()=>{addProductToCart('Privacy_enterprise',1);};
         break;
     case 'product-2.html':
+        //adds to sessionStorage
         var PrivPers= document.getElementById("Server-personal");
         var PrivFami= document.getElementById("Server-family");
         var PrivsBuis= document.getElementById("Server-sbuisness");
@@ -43,11 +44,6 @@ switch (htmlname)
         break;
 }
 
-
-
-
- /// pievieno "/" ar katru pogu !!!
-// pievieno arī papildu 3 laukus
 function addProductToCart(product, quantity){
     // if session is already 
     var newProduct;
@@ -89,6 +85,7 @@ function RemoveProductFromCart(product) {
     var j = 0;
     var prevProducts = JSON.parse(sessionStorage.getItem('products'));
     for(var i=0; i<prevProducts.length; i++){
+        // old items
         if(prevProducts[i].name!=product&&prevProducts[i].quantity>1){
             newProducts[j]={'name':prevProducts[i].name, 'quantity':prevProducts[i].quantity};
             j++;
@@ -98,21 +95,21 @@ function RemoveProductFromCart(product) {
             newProducts[j]={'name':product, 'quantity':prevProducts[i].quantity-1};
             j++;
         }
+        // delete item where quantity is 0
         else{
 
         }
     }
+    // no itemss in session storage left
     if(newProducts==undefined){
         sessionStorage.removeItem('products');
     }
+    //set new products in session
     else
     sessionStorage.setItem('products', JSON.stringify(newProducts));
 
-    // if quantity is 0 delete product
-
-    // if quantity >0 change in session 
 }
-
+// check if product is already in session
 function ProductExists(product) {
     var products =JSON.parse(sessionStorage.getItem("products"));
     var i;
@@ -126,6 +123,7 @@ function ProductExists(product) {
 
 
 function RefreshCartTable(){
+    // prices list
     var prices= {
         name:['Privacy_personal','Privacy_family','Privacy_small_buisness','Privacy_buisness',
     'Privacy_enterprise','Server_personal','Server_family','Server_small_buisness','Server_buisness',
@@ -134,6 +132,7 @@ function RefreshCartTable(){
     };
     var cartTable= document.getElementById('productTable');
     var total= document.getElementById('productTableTotal');
+    // get products from session 
     var products =JSON.parse(sessionStorage.getItem("products"))
     if(products!=null){
         // remove existing table content
@@ -153,6 +152,7 @@ function RefreshCartTable(){
             
             var tr = document.createElement('tr')
             tr.classList.add('cartProductTable');
+            // for footer
             if(i==products.length){
                 AddRowLast(tr,"TOTAL")
                 AddRowLast(tr, " ")
@@ -161,6 +161,7 @@ function RefreshCartTable(){
                 AddRowLast(tr, " ")
                 total.appendChild(tr);
             }
+            // for other data 
             else{
 
                 AddRow(tr, products[i].name)
@@ -173,13 +174,11 @@ function RefreshCartTable(){
                 cartTable.appendChild(tr);
             }
         }
-        
-        
-
-
+        // enable buy button
         buy.disabled=false;
     }
     else{ 
+        // if no products
         var cartTable= document.getElementById('productTable');  
         if(document.getElementById('noCart') == null){      
         var heading=document.createElement('div');
@@ -190,17 +189,20 @@ function RefreshCartTable(){
         }
     }
 }
+// table row add 
 function AddRow(element, value){
     var row1 = document.createElement('td');
     row1.innerHTML = value
     element.appendChild(row1)
 }
+// fotter table row add
 function AddRowLast(element, value){
     var row1 = document.createElement('td');
     row1.innerHTML = value
     row1.style.fontWeight= 'bold'
     element.appendChild(row1)
 }
+
 function addRemoveButton(element, value){
 
     var row1 = document.createElement('td');
@@ -220,6 +222,7 @@ function GetPriceByName(prices, productName){
     return prices.prices[id];
 }
 
+// get index of product in price list
 function GetIdByName(prices, productName){
     var id;
       prices.name.forEach((element, index) => {
@@ -230,8 +233,3 @@ function GetIdByName(prices, productName){
     return id;
   }
 
-  function GetSessionProductIDByName(product_name){
-    
-    var prevProducts= JSON.parse(sessionStorage.getItem('products'));
-
-  }
