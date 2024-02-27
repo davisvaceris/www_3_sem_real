@@ -10,12 +10,12 @@ var rememberMe = document.getElementById("rememberMe");
 
 function login(username, password) {
     // check username 
-    if (!username_regex.test(username)&&username!==("Davis")&&username!==("Inga")) {
+    if (!username_regex.test(username)&&username!==("Davis")) {
         alert("Please enter a username");
     }
     else{
         // if correct username check password
-         if(!password_regex.test(password)&&password!==("Vaceris")&&password!==("Vilumsone")){
+         if(!password_regex.test(password)&&password!==("Vaceris")){
             alert("Please enter a password");
         }
         else{
